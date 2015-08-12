@@ -20,6 +20,7 @@ namespace ExercisesTest
     public class FakeStringWriter : StringWriter
     {
         private ConsoleLog log;
+        private int cursor = 0; //index for the new line - when it's pointing to new line, cursor can be = Entries.count
 
         public FakeStringWriter(ConsoleLog l)
         {
@@ -29,7 +30,14 @@ namespace ExercisesTest
         public override void Write(string str)
         {
             base.Write(str);
-            Entries.Add(str);
+            if (Entries.Count == cursor)
+            {
+                Entries.Add(str);
+            }
+            else
+            {
+                Entries[cursor] = Entries[cursor] + str;
+            }
             log.Add(str);
         }
 
@@ -37,7 +45,14 @@ namespace ExercisesTest
         {
             base.WriteLine(str);
             Entries.Add(str);
+            cursor++;
             log.Add(str + "\r\n");
+        }
+
+        public override void WriteLine()
+        {
+            cursor++;
+            log.Add("\r\n");
         }
     }
 

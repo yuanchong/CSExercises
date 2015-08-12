@@ -137,5 +137,10 @@ namespace ExercisesTest
         {
             Debug.WriteLine(l.Log);
         }
+
+        public string GetOutputFromLast(int i)
+        {
+            return tw.Entries[tw.Entries.Count - i];
+        }
     }
 }
