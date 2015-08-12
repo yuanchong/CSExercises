@@ -8,13 +8,13 @@ namespace ExercisesTest
     public class Ex06Test
     {
         [TestMethod]
-        public void Ex06TestWithZero()
+        public void Ex06_TestWithZero()
         {
             TestHelper.TestOutputEqual(typeof(Ex06), "0\r\n", 0.ToString());
         }
 
         [TestMethod]
-        public void Ex06TestWithRandomNumber()
+        public void Ex06_TestWithRandomNumber()
         {
             Random r = new Random();
             double n = r.Next(1, 100);

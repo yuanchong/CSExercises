@@ -15,7 +15,7 @@ namespace ExercisesTest
         [TestMethod]
         public void Ex28_Test240()
         {
-            TestHelper.TestOutputContains(typeof(Ex28), "240\r\n", "Not Perfect Number");
+            TestHelper.TestOutputContains(typeof(Ex29), "240\r\n", "Not Perfect Number");
         }
     }
 }
