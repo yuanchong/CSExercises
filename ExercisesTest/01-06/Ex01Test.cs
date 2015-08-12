@@ -22,13 +22,13 @@ namespace ExercisesTest
         [TestMethod]
         public void Ex01TestWithName2()
         {
-            TestHelper.TestWithIO(typeof(Ex01),"Jane Doe\r\n", "Good Morning Jane Doe");
+            TestHelper.TestOutputEqual(typeof(Ex01),"Jane Doe\r\n", "Good Morning Jane Doe");
         }
 
         [TestMethod]
         public void Ex01TestWithEmptyString()
         {
-            TestHelper.TestWithIO(typeof(Ex01),"\r\n", "Good Morning");
+            TestHelper.TestOutputEqual(typeof(Ex01),"\r\n", "Good Morning");
         }
 
 

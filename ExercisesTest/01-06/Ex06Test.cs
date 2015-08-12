@@ -10,7 +10,7 @@ namespace ExercisesTest
         [TestMethod]
         public void Ex06TestWithZero()
         {
-            TestHelper.TestWithIO(typeof(Ex06), "0\r\n", 0.ToString());
+            TestHelper.TestOutputEqual(typeof(Ex06), "0\r\n", 0.ToString());
         }
 
         [TestMethod]
@@ -18,7 +18,7 @@ namespace ExercisesTest
         {
             Random r = new Random();
             double n = r.Next(1, 100);
-            TestHelper.TestWithIO(typeof(Ex06), n + "\r\n", String.Format("{0:0.###}",Math.Sqrt(n)));
+            TestHelper.TestOutputEqual(typeof(Ex06), n + "\r\n", String.Format("{0:0.###}",Math.Sqrt(n)));
         }
 
     }
