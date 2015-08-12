@@ -44,34 +44,42 @@ namespace ExercisesTest
         public override void WriteLine(string str)
         {
             base.WriteLine(str);
-            Entries.Add(str);
+            if (Entries.Count == cursor)
+            {
+                Entries.Add(str);
+            }
+            else
+            {
+                Entries[cursor] = Entries[cursor] + str;
+            }
             cursor++;
             log.Add(str + "\r\n");
         }
 
         public override void WriteLine()
         {
-            cursor++;
-            log.Add("\r\n");
+            WriteLine("");
         }
     }
 
     public class FakeStringReader : StringReader
     {
         private ConsoleLog log;
-        public FakeStringReader(string s, ConsoleLog l)
+        private FakeStringWriter tw;
+        public FakeStringReader(string s, ConsoleLog l, FakeStringWriter tw)
             : base(s)
         {
             log = l;
+            this.tw = tw;
         }
 
         public override string ReadLine()
         {
             string s = base.ReadLine();
 
-            log.Add(s + "\r\n");
-
+            log.Add(s);
+            tw.WriteLine();
             return s;
         }
-    } 
+    }
 }

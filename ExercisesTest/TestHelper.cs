@@ -21,12 +21,12 @@ namespace ExercisesTest
         {
             l = new ConsoleLog();
             tw = new FakeStringWriter(l);
+            Console.SetOut(tw);
         }
 
         public void SetupConsole(string input)
         {
-            TextReader tr = new FakeStringReader(input, l);
-            Console.SetOut(tw);
+            TextReader tr = new FakeStringReader(input, l, tw );
             Console.SetIn(tr);
         }
 
@@ -141,6 +141,11 @@ namespace ExercisesTest
         public string GetOutputFromLast(int i)
         {
             return tw.Entries[tw.Entries.Count - i];
+        }
+
+        public int GetOutputCount()
+        {
+            return tw.Entries.Count;
         }
     }
 }

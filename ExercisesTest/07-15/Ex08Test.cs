@@ -8,13 +8,13 @@ namespace ExercisesTest
     public class Ex08Test
     {
         [TestMethod]
-        public void Ex08TestWithZero()
+        public void Ex08_TestWithZero()
         {
             TestHelper.TestOutputEqual(typeof(Ex08), "0\r\n", 32.ToString());
         }
 
         [TestMethod]
-        public void Ex08TestWithRandomPositiveNumber()
+        public void Ex08_TestWithRandomPositiveNumber()
         {
             Random r = new Random();
             double n = r.Next(1, 100);
@@ -22,7 +22,7 @@ namespace ExercisesTest
         }
 
         [TestMethod]
-        public void Ex08TestWithRandomNegativeNumber()
+        public void Ex08_TestWithRandomNegativeNumber()
         {
             Random r = new Random();
             double n = r.Next(-100, -1);

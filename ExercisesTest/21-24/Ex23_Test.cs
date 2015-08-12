@@ -20,7 +20,7 @@ namespace ExercisesTest
                 TestHelper t = new TestHelper();
                 t.SetupConsole(new string[] {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"});
                 TestHelper.RunMain(typeof (Ex23));
-                int count = t.CountOutputContaining("") - 1;
+                int count = t.GetOutputCount() - 1;
                 if (count <= 2)
                 {
                     t.AssertOutputContains("wizard");
