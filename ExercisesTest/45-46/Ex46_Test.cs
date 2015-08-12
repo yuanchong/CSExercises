@@ -17,6 +17,7 @@ namespace ExercisesTest
                 t.SetupConsole(new string[] {});
                 TestHelper.RunMain(typeof (Ex46));
                 t.WriteLog();
+                Assert.IsTrue(t.GetOutputCount() != 0, "No output detected");
                 int residue = 0;
                 for (int i = 20; i >= 10; i--)
                 {
