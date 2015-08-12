@@ -10,10 +10,7 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            string s = Console.ReadLine();
-            int x = Convert.ToInt32(s);
-
-            Console.WriteLine("{0:0.###}", Math.Sqrt(x)); 
+            
         }
     }
 }

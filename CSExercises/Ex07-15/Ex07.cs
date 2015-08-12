@@ -10,10 +10,7 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            Console.Write("Enter your salary:");
-            string input = Console.ReadLine();
-            double salary = Convert.ToDouble(input);
-            Console.WriteLine("{0:c}",salary * 1.13);
+            
         }
     }
 }
