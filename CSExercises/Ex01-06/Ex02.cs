@@ -10,7 +10,10 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            
+            squtnum = 0;
+            int number = Console.ReadLine ("Please enter a integer: ");
+            squtnum = number * number;
+            Console.WriteLine = ("The square of "+ number + " = " + squtnum);
         }
     }
 }
