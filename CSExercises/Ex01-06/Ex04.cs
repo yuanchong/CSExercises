@@ -10,7 +10,9 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            
+            double num = Console.ReadLine("Please enter a value: ");
+            double rootnum = System.Math.Sqrt (num);
+            Console.WriteLine("The square root of "+num+" = "+ rootnum);
         }
     }
 }
